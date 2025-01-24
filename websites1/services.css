@@ -1,0 +1,279 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.6;
+}
+
+/* Header Styles */
+header {
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+header img {
+    width: 80px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.nav-list {
+    list-style: none;
+    display: flex;
+}
+
+.nav-list li {
+    margin: 0 10px;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 16px;
+    transition: color 0.3s ease;
+}
+
+.nav-list a:hover {
+    color: #0056b3;
+}
+
+.book-call {
+    background-color: #38b6ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+.book-call:hover {
+    background-color: #007bff;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    background: url('pic/bg6.jpg') no-repeat center center/cover;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+}
+/* Arrows - Initially Invisible */
+.arrow {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 1.5rem;
+    z-index: 10;
+    opacity: 0; /* Initially invisible */
+    transition: opacity 0.3s ease, background-color 0.3s ease;
+    }
+    
+    /* Left Arrow */
+    .arrow.left {
+    left: 20px;
+    }
+    
+    /* Right Arrow */
+    .arrow.right {
+    right: 20px;
+    }
+    
+    /* On Hover - Hero Section */
+    .hero:hover .arrow {
+    opacity: 1; /* Arrows appear on hover */
+    }
+    
+    /* On Hover - Arrow Effects */
+    .arrow:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+    }
+.services-content {
+    background-color: #002855;
+    color: white;
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    right: 10%;
+    transform: translateY(-50%);
+}
+
+.services-content h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.services-content p {
+    margin-bottom: 20px;
+}
+
+.get-started-btn {
+    background-color: white;
+    color: #002855;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.get-started-btn:hover {
+    background-color: #38b6ff;
+    color: white;
+}
+
+/* Slider Section */
+.package {
+    text-align: center;
+    margin: 50px 20px;
+}
+.package h2{
+    color: #002855;
+}
+
+.slider-container {
+    position: relative;
+    width: 80%;
+    max-width: 900px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.image-wrapper {
+    display: flex;
+}
+
+.image-wrapper img {
+    width: 50%; /* Two images per row */
+    flex-shrink: 0;
+    object-fit: cover;
+    padding: 5px;
+}
+
+.arrows {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.left-arrow {
+    left: 10px;
+}
+
+.right-arrow {
+    right: 10px;
+}
+
+.arrow:hover {
+    background: rgba(0, 0, 0, 0.8);
+}
+/* FAQ Section */
+.faq-section {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.faq-section h1 {
+    font-size: 2rem;
+    text-align: center;
+    margin-bottom: 20px;
+    color: #0056b3;
+}
+
+.faq-container {
+    margin-top: 20px;
+}
+
+.faq-item {
+    margin-bottom: 15px;
+    border-bottom: 1px solid #e1e1e1;
+    padding-bottom: 10px;
+}
+
+.faq-item h3 {
+    font-size: 1.2rem;
+    color: #0056b3;
+    margin-bottom: 8px;
+}
+
+.faq-item p {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+    .faq-section {
+        padding: 15px;
+    }
+
+    .faq-item h3 {
+        font-size: 1.1rem;
+    }
+
+    .faq-item p {
+        font-size: 0.95rem;
+    }
+}
+/* Footer */
+footer {
+    background-color: #343a40;
+    color: white;
+    padding: 20px 50px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+footer div {
+    margin-bottom: 10px;
+}
+
+footer a {
+    color: #38b6ff;
+    text-decoration: none;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
